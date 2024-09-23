@@ -13,7 +13,7 @@ function Login() {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:5000/login', { username, password }); // Note port is 5000
+      const response = await axios.post('https://cursor-back.vercel.app/login', { username, password }); // Note port is 5000
       const { token, role, studentId } = response.data;
       
       // Store the token and role in localStorage
